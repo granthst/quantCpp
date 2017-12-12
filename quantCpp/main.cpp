@@ -1,15 +1,17 @@
 //
 //  main.cpp
-//  quantCpp
+//  CppQuantFinance
 //
-//  Created by Geyijie on 13/12/2017.
+//  Created by Geyijie on 12/12/2017.
 //  Copyright © 2017 Geyijie. All rights reserved.
 //
 
 #include <iostream>
-
+#include "vanillaOption.h"
+using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    VanillaOption v;
+    cout << v.getK() <<endl;
     return 0;
 }
