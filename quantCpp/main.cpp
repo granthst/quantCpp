@@ -12,6 +12,6 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
     VanillaOption v;
-    cout << v.getK() <<endl;
+    cout << v.calc_put_price() <<endl;
     return 0;
 }
