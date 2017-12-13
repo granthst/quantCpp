@@ -10,7 +10,10 @@
 #include "vanillaOption.h"
 #include <vector>
 #include <list>
+#include<thread>
 #include<algorithm>
+#include "threadTest.h"
+//#include "multiThreadingStudy.cpp"
 using namespace std;
 
 struct Vector {
@@ -153,6 +156,11 @@ bool myfunction (int i, int j) {
     return (i==j);
 }
 
+//void hello()
+//{
+//    std::cout<<"Hello Concurrent World\n";
+//}
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -175,19 +183,19 @@ int main(int argc, const char * argv[]) {
 //    for (Entry ee; cin>>ee; ) // read from cin into ee
 //        cout << ee << '\n'; // write ee to cout
     
-    vector<Entry> phone_book = {
-        {"David Hume",123456},
-        {"Karl Popper",24567},
-        {"Karl Popper",245672},
-        {"Bertrand Arthur William Russell",345678},
-        {"Bertrand Arthur William Russell",34544678}
-    };
-
-    list<Entry> lst(5);
-    f(phone_book,lst);
-    
-    cout << phone_book.size() << endl;
-    print_book_2(lst);
+//    vector<Entry> phone_book = {
+//        {"David Hume",123456},
+//        {"Karl Popper",24567},
+//        {"Karl Popper",245672},
+//        {"Bertrand Arthur William Russell",345678},
+//        {"Bertrand Arthur William Russell",34544678}
+//    };
+//
+//    list<Entry> lst(5);
+//    f(phone_book,lst);
+//
+//    cout << phone_book.size() << endl;
+//    print_book_2(lst);
     
     
 //    int myints[] = {10,20,20,20,30,30,20,20,10};
@@ -213,5 +221,11 @@ int main(int argc, const char * argv[]) {
 //    for (it=myvector.begin(); it!=myvector.end(); ++it)
 //        std::cout << ' ' << *it;
 //    std::cout << '\n';
+    
+    thread t(hello);
+    t.join();
+    
+    
+    
     return 0;
 }
